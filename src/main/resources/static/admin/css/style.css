@@ -1,0 +1,19 @@
+.font{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.mt-5{
+    margin-top: 50px;
+}
+
+.mt-1{
+    margin-top: 5px;
+}
+
+.form-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

@@ -1,0 +1,48 @@
+.cursor {
+    cursor: pointer;
+}
+
+.page_h {
+    background: url(../images/header-danh-muc-slide-20.png) center center;
+    float: none;
+    padding: 0;
+    width: auto;
+    height: 450px;
+}
+
+.product-title {
+    text-decoration: none;
+    color: black;
+}
+
+.box {
+    position: relative;
+}
+
+.add-product {
+    position: absolute;
+    top: 70%;
+    transform: translateX(280%);
+    cursor: pointer;
+    display: none;
+    font-size: 50px;
+}
+
+/* .box:hover {
+    display:block;
+    transform: translateY(10px);
+    transition: all linear 0.2s;
+} */
+
+.footer{
+    background: url(../images/slide-map-footer-slide-19.png) no-repeat;
+    height: 300px;
+}
+.text-decoration{
+    text-decoration: none;
+    color: white;
+}
+
+.li_menu{
+    list-style: none;
+}

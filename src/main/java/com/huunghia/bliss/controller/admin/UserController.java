@@ -1,26 +1,25 @@
 package com.huunghia.bliss.controller.admin;
 
 import com.huunghia.bliss.entity.User;
-import com.huunghia.bliss.service.UserService;
+//import com.huunghia.bliss.service.impl.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.huunghia.bliss.service.IUserService;
 
 @Controller
 @RequestMapping("/admin")
 public class UserController {
-    private UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+    @Autowired
+    private IUserService userService;
 
     @GetMapping("/users")
     public String index(Model model){
-        model.addAttribute("users", userService.getUsers());
+        model.addAttribute("users", userService.getAllUser());
         return "admin/users/index";
     }
 

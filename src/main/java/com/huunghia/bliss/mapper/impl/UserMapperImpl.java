@@ -1,15 +1,12 @@
-package com.huunghia.bliss.mapper;
+package com.huunghia.bliss.mapper.impl;
 
 import com.huunghia.bliss.dto.request.UserCreationRequest;
 import com.huunghia.bliss.dto.request.UserUpdationRequest;
-import com.huunghia.bliss.entity.Role;
 import com.huunghia.bliss.entity.User;
-import com.huunghia.bliss.repository.RoleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.huunghia.bliss.mapper.UserMapper;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Component
 public class UserMapperImpl implements UserMapper {

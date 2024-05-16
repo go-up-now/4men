@@ -37,9 +37,9 @@ public class User {
     @Column(name = "updated_at")
     LocalDateTime updatedAt;
 
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    Role role = new Role();
+//    @ManyToOne
+//    @JoinColumn(name = "role_id")
+//    Role role = new Role();
 
     @OneToMany(mappedBy = "user")
     Set<Order> orders;

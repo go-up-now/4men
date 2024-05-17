@@ -52,8 +52,12 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <i class='bx bx-shopping-bag cursor me-3'></i>
-                <i class='bx bx-user cursor'></i>
+                <a th:href="@{cart}">
+                    <i class='bx bx-shopping-bag cursor me-3'></i>
+                </a>
+                <a th:href="@{login}">
+                        <i class='bx bx-user cursor'></i>
+                </a>
             </form>
         </div>
     </div>

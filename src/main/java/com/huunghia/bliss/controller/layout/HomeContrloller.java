@@ -19,4 +19,17 @@ public class HomeContrloller {
     public String getDetailShirt(){
         return "layout/detail-product";
     }
+
+    @RequestMapping("/login")
+    public String getLogin(){
+        return "layout/login";
+    }
+    @RequestMapping("/register")
+    public String getRegister(){
+        return "layout/register";
+    }
+    @RequestMapping("/forgot-password")
+    public String getPassword(){
+        return "layout/forgot-password";
+    }
 }

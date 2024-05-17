@@ -1,0 +1,23 @@
+.form-control {
+    border-radius: 0;
+}
+a{
+    text-decoration: none;
+}
+.color-font{
+    color: black;
+}
+.bt-login{
+    color: white;
+    background-color: black;
+}
+/* .full-height {*/
+/*    height:90vh;*/
+/*}*/
+.full-height{
+    margin-top: -30px;
+}
+.bt-login:hover {
+    background-color: white;
+    color: black;
+}

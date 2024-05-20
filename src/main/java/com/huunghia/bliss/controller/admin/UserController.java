@@ -25,6 +25,7 @@ public class UserController {
 
     @GetMapping("/add-user")
     public String createUser(@ModelAttribute("user")User user){
+
         return "admin/users/add";
     }
 

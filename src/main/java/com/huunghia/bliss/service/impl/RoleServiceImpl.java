@@ -1,6 +1,6 @@
 package com.huunghia.bliss.service.impl;
 
-import com.huunghia.bliss.dto.request.RoleRequest;
+import com.huunghia.bliss.dto.RoleDto;
 import com.huunghia.bliss.entity.Role;
 import com.huunghia.bliss.mapper.IRoleMapper;
 import com.huunghia.bliss.repository.RoleRepository;
@@ -15,13 +15,13 @@ public class RoleServiceImpl implements IRoleService {
     RoleRepository roleRepository;
 
     @Override
-    public Role createRole(RoleRequest request) {
+    public Role createRole(RoleDto request) {
         Role role = roleMapper.toRole(request);
         return roleRepository.saveAndFlush(role);
     }
 
     @Override
-    public Role updateRole(RoleRequest request, Long id) {
+    public Role updateRole(RoleDto request, Long id) {
         Role role = roleMapper.toRole(request);
         return roleRepository.saveAndFlush(role);
     }

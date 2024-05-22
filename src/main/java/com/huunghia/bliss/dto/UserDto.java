@@ -1,20 +1,20 @@
-package com.huunghia.bliss.dto.request;
+package com.huunghia.bliss.dto;
 
 import com.huunghia.bliss.entity.Role;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import lombok.extern.java.Log;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserUpdationRequest {
+public class UserDto {
+    String username;
     String password;
     String email;
     String phone;
@@ -25,7 +25,4 @@ public class UserUpdationRequest {
     String img;
     String state;
     Role role;
-
-    @Column(name = "updated_at")
-    LocalDateTime updatedAt;
 }

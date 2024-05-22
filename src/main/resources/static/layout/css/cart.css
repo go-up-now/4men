@@ -1,0 +1,24 @@
+
+.card a img{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.full-menu{
+    background-color: white;
+    box-shadow: 0 0 5px rgb(238, 233, 233);
+}
+.menu-title{
+    text-align: left;
+}
+/* .image-product{
+    width: 30px;
+} */
+.image-product img {
+    width: 40px;
+}
+
+
+
+

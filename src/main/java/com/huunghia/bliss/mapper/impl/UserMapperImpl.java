@@ -1,7 +1,6 @@
 package com.huunghia.bliss.mapper.impl;
 
-import com.huunghia.bliss.dto.request.UserCreationRequest;
-import com.huunghia.bliss.dto.request.UserUpdationRequest;
+import com.huunghia.bliss.dto.UserDto;
 import com.huunghia.bliss.entity.User;
 import com.huunghia.bliss.mapper.UserMapper;
 import org.springframework.stereotype.Component;
@@ -11,7 +10,7 @@ import java.time.LocalDateTime;
 @Component
 public class UserMapperImpl implements UserMapper {
     @Override
-    public User toUser(UserCreationRequest request) {
+    public User toUser(UserDto request) {
         if(request == null)
             return null;
         else{
@@ -21,18 +20,17 @@ public class UserMapperImpl implements UserMapper {
             user.setEmail(request.getEmail());
             user.setAddress(request.getAddress());
             user.setPhone(request.getPhone());
-            user.setBirthday(request.getBirthday());
             user.setCreatedAt(LocalDateTime.now());
             user.setImg(request.getImg());
             user.setFullname(request.getFullname());
             user.setState(request.getState());
-            user.setGender(request.getGender());
+
             return user;
         }
     }
 
     @Override
-    public void updateUser(User user, UserUpdationRequest request) {
+    public void updateUser(User user, UserDto request) {
         user.setPassword(request.getPassword());
         user.setEmail(request.getEmail());
         user.setAddress(request.getAddress());

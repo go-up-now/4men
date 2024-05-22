@@ -1,7 +1,6 @@
 package com.huunghia.bliss.api;
 
-import com.huunghia.bliss.dto.request.UserCreationRequest;
-import com.huunghia.bliss.dto.request.UserUpdationRequest;
+import com.huunghia.bliss.dto.UserDto;
 import com.huunghia.bliss.entity.User;
 import com.huunghia.bliss.service.impl.UserServicesImpl;
 import jakarta.validation.Valid;
@@ -18,12 +17,12 @@ public class UserControllerApi {
     UserServicesImpl userService;
 
     @PostMapping
-    User createUser(@RequestBody @Valid UserCreationRequest request){
+    User createUser(@RequestBody @Valid UserDto request){
         return userService.insertNewUser(request);
     }
 
     @PutMapping("/{userid}")
-    User updateUser(@PathVariable Long userid, @RequestBody UserUpdationRequest request){
+    User updateUser(@PathVariable Long userid, @RequestBody UserDto request){
         return userService.updateUser(request, userid);
     }
 
@@ -35,6 +34,7 @@ public class UserControllerApi {
 
     @GetMapping
     List<User> getUsers(){
+
         return userService.getAllUser();
     }
 

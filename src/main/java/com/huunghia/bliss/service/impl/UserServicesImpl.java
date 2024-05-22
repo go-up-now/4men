@@ -1,7 +1,6 @@
 package com.huunghia.bliss.service.impl;
 
-import com.huunghia.bliss.dto.request.UserCreationRequest;
-import com.huunghia.bliss.dto.request.UserUpdationRequest;
+import com.huunghia.bliss.dto.UserDto;
 import com.huunghia.bliss.entity.User;
 import com.huunghia.bliss.mapper.UserMapper;
 import com.huunghia.bliss.repository.RoleRepository;
@@ -24,7 +23,7 @@ public class UserServicesImpl implements IUserService {
     RoleRepository roleRepository;
 
     @Override
-    public User insertNewUser(UserCreationRequest request) {
+    public User insertNewUser(UserDto request) {
         if(userRepository.existsByUsername(request.getUsername()))
             throw new RuntimeException("Username existed");
 //        Role role = getRole(3L);
@@ -35,11 +34,9 @@ public class UserServicesImpl implements IUserService {
     }
 
     @Override
-    public User updateUser(UserUpdationRequest request, Long id) {
+    public User updateUser(UserDto request, Long id) {
         User user = this.getUser(id);
-
         userMapper.updateUser(user, request);
-
         return userRepository.save(user);
     }
 
